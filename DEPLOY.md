@@ -57,6 +57,8 @@ After the frontend URL is live:
    | `VITE_FIREBASE_APP_ID` | your app id |
    | `VITE_API_URL` | `https://expense-tracker-api.onrender.com/api` |
 
+   **Important:** the URL must include `/api` at the end (or the app will append it automatically after the next deploy).
+
 5. Deploy. Copy your live URL, e.g. `https://expense-tracker.vercel.app`.
 
 ---

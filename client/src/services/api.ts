@@ -1,6 +1,14 @@
 import type { Expense, ExpenseFormData } from '../types/expense';
 
-const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:4000/api').replace(/\/+$/, '');
+/** Ensures the base URL always ends with /api (common deploy mistake is omitting it). */
+const normalizeApiBase = (url: string) => {
+  const trimmed = url.replace(/\/+$/, '');
+  return trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+};
+
+const API_BASE_URL = normalizeApiBase(
+  import.meta.env.VITE_API_URL || 'http://localhost:4000/api'
+);
 
 export interface UserProfile {
   displayName: string;
