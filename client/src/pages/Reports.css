@@ -1,0 +1,237 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reports-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.reports-period {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.reports-period-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reports-period-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.reports-period-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.reports-export-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reports-export-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.reports-export-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reports-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.reports-summary-item {
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.reports-summary-label {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #718096;
+}
+
+.reports-summary-value {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.reports-trend {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  align-items: end;
+  min-height: 220px;
+}
+
+.reports-trend-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.reports-trend-value {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4a5568;
+  min-height: 1rem;
+  text-align: center;
+}
+
+.reports-trend-bar-track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 120px;
+}
+
+.reports-trend-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px 8px 0 0;
+  transition: height 0.3s ease;
+  min-height: 2px;
+}
+
+.reports-trend-label {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.reports-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.reports-table th {
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #718096;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reports-table td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+}
+
+.reports-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reports-table-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.reports-table-share {
+  font-weight: 700;
+}
+
+.reports-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reports-highlights li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.reports-highlight-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #718096;
+}
+
+.reports-highlight-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.reports-highlight-meta {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+@media (max-width: 900px) {
+  .reports-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .reports-trend {
+    gap: 0.4rem;
+  }
+
+  .reports-trend-value {
+    font-size: 0.6rem;
+  }
+}

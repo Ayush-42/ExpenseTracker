@@ -1,0 +1,176 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.dashboard-grid-item {
+  min-width: 0;
+}
+
+.dashboard-recent-expenses {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.dashboard-recent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-recent-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.dashboard-view-all-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dashboard-view-all-btn:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.dashboard-loading,
+.dashboard-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #718096;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dashboard-add-btn-small {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-add-btn-small:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dashboard-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-recent-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-recent-item:hover {
+  background: #edf2f7;
+}
+
+.dashboard-recent-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.dashboard-recent-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-recent-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a202c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-recent-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.dashboard-recent-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e53e3e;
+  white-space: nowrap;
+}
+
+/* Expenses page */
+.dashboard-expenses-page {
+  width: 100%;
+}
+
+.dashboard-expenses-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.dashboard-expenses-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #1a202c;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dashboard-expenses-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-expenses-header h2 {
+    font-size: 1.5rem;
+  }
+}

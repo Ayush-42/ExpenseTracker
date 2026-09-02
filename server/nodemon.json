@@ -1,0 +1,8 @@
+{
+  "watch": ["server.js", "config", "middleware", "models", "routes"],
+  "ext": "js,json",
+  "ignore": ["node_modules/**", ".git/**"],
+  "legacyWatch": true,
+  "delay": 1000
+}
+

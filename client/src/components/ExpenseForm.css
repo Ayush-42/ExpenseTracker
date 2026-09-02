@@ -1,0 +1,197 @@
+.expense-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.expense-form-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.expense-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.expense-form-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a202c;
+}
+
+.expense-form-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.expense-form-close:hover {
+  color: #1a202c;
+}
+
+.expense-form {
+  padding: 1.5rem;
+}
+
+.expense-form-error {
+  background: #fee;
+  color: #c33;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  border: 1px solid #fcc;
+}
+
+.expense-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.expense-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.expense-form-group input,
+.expense-form-group select,
+.expense-form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: white;
+  color: #1a202c;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.expense-form-group input:focus,
+.expense-form-group select:focus,
+.expense-form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.expense-form-group input:disabled,
+.expense-form-group select:disabled,
+.expense-form-group textarea:disabled {
+  background-color: #f7fafc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.expense-form-group textarea {
+  resize: vertical;
+}
+
+.expense-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.expense-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.expense-form-cancel,
+.expense-form-submit {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expense-form-cancel {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.expense-form-cancel:hover:not(:disabled) {
+  background: #cbd5e0;
+}
+
+.expense-form-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.expense-form-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.expense-form-cancel:disabled,
+.expense-form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .expense-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-form-modal {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+    margin-top: auto;
+  }
+}
+

@@ -1,0 +1,35 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="walletBody" x1="24" y1="36" x2="96" y2="88">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="52" fill="url(#brand)" opacity="0.12"/>
+
+  <!-- Wallet body -->
+  <rect x="24" y="44" width="72" height="44" rx="10" fill="url(#walletBody)"/>
+  <rect x="24" y="44" width="72" height="14" rx="10" fill="#5a67d8" opacity="0.35"/>
+
+  <!-- Card peeking out -->
+  <rect x="32" y="38" width="56" height="12" rx="4" fill="#E2E8F0"/>
+  <rect x="36" y="41" width="20" height="3" rx="1.5" fill="#CBD5E0"/>
+  <rect x="36" y="46" width="32" height="2" rx="1" fill="#CBD5E0"/>
+
+  <!-- Clasp -->
+  <circle cx="84" cy="66" r="7" fill="#553C9A"/>
+  <circle cx="84" cy="66" r="4" fill="#E2E8F0"/>
+
+  <!-- Rupee symbol -->
+  <text x="52" y="74" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">₹</text>
+
+  <!-- Mini expense bars -->
+  <rect x="62" y="62" width="5" height="10" rx="1.5" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="70" y="58" width="5" height="14" rx="1.5" fill="#FFFFFF" opacity="0.95"/>
+  <rect x="78" y="54" width="5" height="18" rx="1.5" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,204 @@
+.date-range-filter {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.date-range-filter-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.date-range-filter-preset {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.date-range-filter-preset:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.date-range-filter-preset.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.date-range-filter-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.date-range-filter-summary:hover,
+.date-range-filter-summary.open {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.date-range-filter-calendar-icon {
+  font-size: 1rem;
+}
+
+.date-range-filter-popover {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  width: min(340px, calc(100vw - 2rem));
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  padding: 1rem 1rem 0.75rem;
+}
+
+.date-range-filter-popover-head p {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.date-range-filter-month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.date-range-filter-month-nav h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.date-range-filter-nav-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.date-range-filter-nav-btn:hover:not(:disabled) {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.date-range-filter-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.date-range-filter-weekdays,
+.date-range-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+}
+
+.date-range-filter-weekdays span {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  padding: 0.25rem 0;
+}
+
+.date-range-filter-day {
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.date-range-filter-day.empty {
+  cursor: default;
+}
+
+.date-range-filter-day:hover:not(:disabled):not(.empty) {
+  background: #edf2ff;
+  color: #4c51bf;
+}
+
+.date-range-filter-day.in-range {
+  background: #eef2ff;
+}
+
+.date-range-filter-day.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.date-range-filter-day.today:not(.selected) {
+  box-shadow: inset 0 0 0 1px #667eea;
+}
+
+.date-range-filter-day.disabled {
+  color: #cbd5e0;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  background: transparent;
+}
+
+.date-range-filter-shortcuts {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
+}
+
+.date-range-filter-shortcuts button {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.date-range-filter-shortcuts button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .date-range-filter-popover {
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+}

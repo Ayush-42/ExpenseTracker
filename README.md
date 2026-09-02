@@ -90,10 +90,14 @@ The app will be available at `http://localhost:5173`
    npm install
    ```
 
-3. Create a `.env` file in the `server` directory (optional):
+3. Create a `.env` file in the `server` directory:
    ```bash
-   PORT=3000
+   cp .env.example .env
+   ```
+   ```bash
+   PORT=4000
    CLIENT_URL=http://localhost:5173
+   MONGODB_URI=mongodb://localhost:27017/expense-tracker
    ```
 
 4. Start the server:
@@ -101,7 +105,8 @@ The app will be available at `http://localhost:5173`
    npm start
    ```
 
-The server will run on `http://localhost:3000`
+The server will run on `http://localhost:4000`. If you change `PORT`, update
+`VITE_API_URL` in `client/.env` to match, otherwise the app talks to the wrong port.
 
 ## Project Structure
 
